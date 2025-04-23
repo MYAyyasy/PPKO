@@ -1,0 +1,230 @@
+/* Reset CSS */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Agar tidak ada scroll */
+  background-color: #87ceeb; /* Warna biru tua */
+}
+
+/* Layer Bawah: Kolase Foto */
+.background-collage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Layer bawah */
+}
+
+.collage-photo {
+  width: 150px; /* Ukuran foto */
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0.8; /* Transparansi */
+  transition: opacity 0.3s, transform 0.3s, z-index 0.3s;
+}
+
+.collage-photo:hover {
+  opacity: 1;
+  z-index: 10;
+  /*Fotoyangdihoverakanmunculdiatas*/transform: scale(1.1) rotate(0deg) !important;
+   /* Hilangkan rotasi saat hover */:;
+  -webkit-transform: scale(1.1) rotate(0deg) !important;
+  -moz-transform: scale(1.1) rotate(0deg) !important;
+  -ms-transform: scale(1.1) rotate(0deg) !important;
+  -o-transform: scale(1.1) rotate(0deg) !important;
+}
+
+/* Posisi dan Rotasi Acak untuk 30 Foto */
+.collage-photo:nth-child(1) {
+  top: 5%;
+  left: 5%;
+  transform: rotate(-5deg);
+}
+.collage-photo:nth-child(2) {
+  top: 10%;
+  left: 20%;
+  transform: rotate(3deg);
+}
+.collage-photo:nth-child(3) {
+  top: 15%;
+  left: 35%;
+  transform: rotate(7deg);
+}
+.collage-photo:nth-child(4) {
+  top: 20%;
+  left: 10%;
+  transform: rotate(-2deg);
+} /* Pindahkan ke kiri */
+.collage-photo:nth-child(5) {
+  top: 25%;
+  left: 65%;
+  transform: rotate(4deg);
+}
+.collage-photo:nth-child(6) {
+  top: 30%;
+  left: 80%;
+  transform: rotate(-8deg);
+}
+.collage-photo:nth-child(7) {
+  top: 70%;
+  left: 70%;
+  transform: rotate(2deg);
+} /* Pindahkan ke kanan bawah */
+.collage-photo:nth-child(8) {
+  top: 40%;
+  left: 25%;
+  transform: rotate(-6deg);
+}
+.collage-photo:nth-child(9) {
+  top: 45%;
+  left: 85%;
+  transform: rotate(5deg);
+} /* Pindahkan ke kanan */
+.collage-photo:nth-child(10) {
+  top: 50%;
+  left: 15%;
+  transform: rotate(-3deg);
+} /* Pindahkan ke kiri */
+.collage-photo:nth-child(11) {
+  top: 55%;
+  left: 70%;
+  transform: rotate(6deg);
+}
+.collage-photo:nth-child(12) {
+  top: 60%;
+  left: 85%;
+  transform: rotate(-4deg);
+}
+.collage-photo:nth-child(13) {
+  top: 65%;
+  left: 5%;
+  transform: rotate(1deg);
+}
+.collage-photo:nth-child(14) {
+  top: 70%;
+  left: 20%;
+  transform: rotate(-7deg);
+}
+.collage-photo:nth-child(15) {
+  top: 75%;
+  left: 35%;
+  transform: rotate(3deg);
+}
+.collage-photo:nth-child(16) {
+  top: 80%;
+  left: 50%;
+  transform: rotate(-5deg);
+}
+.collage-photo:nth-child(17) {
+  top: 85%;
+  left: 65%;
+  transform: rotate(2deg);
+}
+.collage-photo:nth-child(18) {
+  top: 90%;
+  left: 80%;
+  transform: rotate(-6deg);
+}
+.collage-photo:nth-child(19) {
+  top: 5%;
+  left: 90%;
+  transform: rotate(4deg);
+}
+.collage-photo:nth-child(20) {
+  top: 10%;
+  left: 75%;
+  transform: rotate(-3deg);
+}
+.collage-photo:nth-child(21) {
+  top: 15%;
+  left: 60%;
+  transform: rotate(-10deg);
+}
+.collage-photo:nth-child(22) {
+  top: 20%;
+  left: 45%;
+  transform: rotate(8deg);
+}
+.collage-photo:nth-child(23) {
+  top: 25%;
+  left: 30%;
+  transform: rotate(-12deg);
+}
+.collage-photo:nth-child(24) {
+  top: 30%;
+  left: 15%;
+  transform: rotate(10deg);
+}
+.collage-photo:nth-child(25) {
+  top: 35%;
+  left: 5%;
+  transform: rotate(-15deg);
+}
+.collage-photo:nth-child(26) {
+  top: 40%;
+  left: 85%;
+  transform: rotate(12deg);
+}
+.collage-photo:nth-child(27) {
+  top: 45%;
+  left: 70%;
+  transform: rotate(-8deg);
+}
+.collage-photo:nth-child(28) {
+  top: 50%;
+  left: 55%;
+  transform: rotate(5deg);
+}
+.collage-photo:nth-child(29) {
+  top: 55%;
+  left: 40%;
+  transform: rotate(-10deg);
+}
+.collage-photo:nth-child(30) {
+  top: 60%;
+  left: 25%;
+  transform: rotate(7deg);
+}
+
+/* Layer Atas: Spotlight */
+.spotlight-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2; /* Layer atas */
+  pointer-events: none; /* Agar tidak mengganggu interaksi dengan foto di kolase */
+}
+
+.text-above {
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.text-below {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-photo {
+  height: 400px;
+  width: auto;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+}
